@@ -1,26 +1,16 @@
-package com.service;
-
-import java.util.List;
+package com.example.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.demo.entity.LocationEntity;
+import com.example.demo.Entity.LocationEntity;
 import com.example.demo.repository.LocationRepository;
 
-public class LocationServiceImp implements LocationService {
+public class LocationServiceImp implements LocationService{
     @Autowired
-    LocationRepository locationrepo;
+    LocationRepository Locationrepo;
     @Override
     public LocationEntity createlocation(LocationEntity le){
-        return locationrepo.save(le);
+        return Locationrepo.save(le);
     }
-    public List<LocationEntity> getall(){
-        return locationrepo.findAll();
-    }
-    @Override
-    public List<LocationEntity> getalllocation() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getalllocation'");
-    }
- 
 }
+

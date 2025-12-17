@@ -1,4 +1,5 @@
 package com.example.demo.entity;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,8 +10,6 @@ public class LocationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    //@GeneratedValue(stratergy=GenerationType.IDENTITY)
-    //private Long id;
     private String name;
     private Double latitude;
     private Double longitude;
@@ -32,17 +31,18 @@ public class LocationEntity {
     public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
-    public LocationEntity(Long id, String name, Double latitude, Double longitude) {
-        this.id = id;
-        this.name = name;
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
     public Double getLongitude() {
         return longitude;
     }
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
+    public LocationEntity() {
+    }
+    public LocationEntity(Long id, String name, Double latitude, Double longitude) {
+        this.id = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 }
-   
